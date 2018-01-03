@@ -1,0 +1,53 @@
+/*统一样式*/
+html,header,nav,footer,b,i,div,ul,li,p,span,img,form,input,a,ol,dl,dt,dd,table,tr,td,body{
+	margin: 0;
+	padding: 0;
+	color: #666666;
+	font-family: "微软雅黑";
+	box-sizing:border-box; 
+}
+ul,li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+html{
+	font-size: 100px;
+}
+body{
+	font-size: 16px;
+}
+::-webkit-scrollbar{
+	height: 0;
+	width: 0;
+}
+
+.bg{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: url(../img/bg.jpg)left top no-repeat;
+	background-size: 100% 100%;
+	z-index: 1;
+}
+.pinao{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 500;
+	display: flex;
+	flex-direction:column;
+	flex-wrap:nowrap;
+}
+.pinao_list{
+	flex:1;
+	width: 1.92rem;
+	display: block;
+	margin-left: .23rem;
+	z-index: 999;
+}
