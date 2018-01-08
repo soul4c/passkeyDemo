@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>360同城帮 - 手机维修、手机回收、优品</title>
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="js/baiduTemplate.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css">
+	
+</head>
+<body>
+	<!-- 头部导航栏 -->
+	<div id="index-nav">
+		<ul id="index-nav-box">
+			<li id="index-city">
+				<span>北京</span>
+				<span>[切换城市]</span>
+				<div id="changecity">
+					<span>城市列表</span>
+					<span class="close">关闭X</span>
+					<!-- 关闭切换城市 -->
+					
+
+					<div id="city-box">
+						<div id="city-hot" class="city-hot">
+							<span>热门</span>
+							<div>
+								<script type="text/html" id="cityhotlist">
+									<%for(var i in result.hotcity){%>
+										<span class="index-citynames"><%=result.hotcity[i].name%></span>
+									<%}%>
+								</script>
+							</div>
+						</div>
+						<div id="city-group" class="city-group">
+							<script type="text/html" id="citynamelist">
+								<span>拼音</span>
+								<p>
+									<%for(var i in result.citylist){%>
+										<span class="city-group-blur"><%=i%></span>
+									<%}%>
+								</p>
+									<%for(var i in result.citylist){%>
+										<div>
+											<%for(var j in result.citylist[i]){%>
+											<span class="index-citynames2"><%=result.citylist[i][j].name%></span>
+											<%}%>
+										</div>
+									<%}%>
+							</script>
+						</div>
+					</div>
+				</div>
+				<!-- 打开切换城市 -->
+				
+			</li>
+			<li><a href="index.html">同城帮首页</a></li>
+			<ul id="index-nav-boxright">
+				<li id="login"><span>登录</span></li>
+				<li id="logup"><span>注册</span></li>
+				<li id="myBook"><span>我的订单</span></li>
+				<li><a href="javascript:;">在线客服</a>（9:00-21:00）</li>
+				<li id="serve">
+					<span>客户服务</span>
+					<b></b>
+					<div>
+						<p><span>客户服务</span><b></b></p>
+						<p><a href="javascript:;">帮助中心</a></p>
+						<p><a href="javascript:;">维修付款</a></p>
+					</div>
+				</li>
+				<li>论坛</li>
+				<li><span>投诉建议</span></li>
+			</ul>
+		</ul>
+	</div>
+	<!-- 头部导航栏结束 -->
+
+
+	<!-- 头部导航栏分支页面 -->
+	<!-- 登录 -->
+	<div id="login-page">
+		<div id="login-box">
+			<div id="login-box-top">
+				<div>
+					<p>欢迎登录360同城帮</p>
+				</div>
+				<span class="close"></span>
+				
+			</div>
+
+
+
+
+			<form action="">
+				<p class="loginform"><span>账&nbsp;&nbsp;号</span><input type="text" placeholder="手机号/用户名/邮箱"></p>
+				<p class="loginform"><span>密&nbsp;&nbsp;码</span><input type="password" placeholder="请输入您的密码"></p>
+				<p class="loginself"><input type="checkbox">下次自动登录</p>
+				<p class="login-btn"><input type="submit" name="login-btn" value=""></p>
+				<!-- 按钮点击样式 -->
+				
+				<p class="otherlog">
+					<span>其他账号登录:</span>
+					<ul class="otherlogul">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</p>
+			</form>
+
+
+
+			<div id="login-box-bot">
+				<a href="javascript:;"><span>注册新帐号</span></a>
+				<a href="javascript:;"><span id="blue">忘记密码？</span></a>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- 注册 -->
+	<div class="logup-page">
+		<div class="logup-tel"></div>
+	</div>
+	<!-- 头部导航栏分支页面结束 -->
+	
+
+
+	<!-- 主题部分 -->
+	<div class="whitepool f1">
+		<header>
+			<a href="javascript:;" class="logo"></a>
+			<ul class="nav">
+				<li>
+					<a href="">二手优品</a>
+				</li>
+				<li>
+					<a href="">手机回收</a>
+				</li>
+				<li>
+					<a href="">手机维修</a>
+				</li>
+				<li>
+					<a href="">电脑维修</a>
+				</li>
+				<li>
+					<a href="">以旧换新</a>
+				</li>
+				<li>
+					<a href="">手机租用</a>
+				</li>
+				<img src="img/t01198d7629a60c4940.png">
+			</ul>
+		</header>
+		<div class="banner">
+			<ul class="banner-nav">
+				<li>
+					<span>修手机/Pad</span>
+					<div class="banner-box bnav1">
+						<img src="img/t0145e5f8e7edf2d687.png" class="arrow">
+						<table>
+							<script type="text/html" id="fixtel">
+								<%for(var i in result){%>
+									<tr>
+										<td class="bnav1-tit"><%=result[i].name%> ></td>
+										<td class="bnav1-bod">
+											<ul>
+												<%for(var j in result[i].list){%>
+													<li><%=result[i].list[j].name%></li>
+												<%}%>
+												
+											</ul>
+										</td>
+									</tr>
+								<%}%>
+							</script>
+						</table>
+					</div>
+				</li>
+				<li>
+					<span>修电脑</span>
+					<div class="banner-box bnav2">
+						<img src="img/t0145e5f8e7edf2d687.png" class="arrow">
+						<div class="bnav2-bod bnav2-top" id="bnav2-top">
+							<span>热门问题：</span>
+							<div>
+								<script type="text/html" id="bnav2hot">
+									<%for(var i in result.hot){%>
+										<span><%=result.hot[i].name%></span>
+									<%}%>
+								</script>
+							</div>
+						</div>
+
+
+						<div class="bnav2-bod bnav2-bot">
+							<span>其他问题：</span>
+							<div>
+								<script type="text/html" id="bnav2other">
+								<%for(var i in result.other){%>
+									<span><%=result.other[i].name%></span>
+								<%}%>
+								</script>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<span>卖手机/电脑</span>
+					<div class="banner-box bnav3">
+						<img src="img/t0145e5f8e7edf2d687.png" class="arrow">
+						<div class="bnav3-bod">
+							<script type="text/html" id="bnav3phone">
+								<%for(var i in result){%>
+									<span><%=result[i].name%></span>
+								<%}%>
+							</script>
+						</div>
+					</div>
+				</li>
+				<li>
+					<span>买二手机</span>
+					<div class="banner-box bnav4">
+						<img src="img/t0145e5f8e7edf2d687.png" class="arrow">
+						<div class="bnav4-bod">
+							<script type="text/html" id="bnav4phone">
+								<%for(var i in result){%>
+									<span><%=result[i]%></span>
+								<%}%>
+							</script>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="banner-img">
+				<!-- 导航 -->
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide">
+				        	<img src="img/t01a01884a45e3c716f.png">
+				        </div>
+				        <div class="swiper-slide">
+				        	<img src="img/t010277e84ce18b98b6.png">
+				        </div>
+				        <div class="swiper-slide">
+				        	<img src="img/t019f09cd1c5850e1a7.png">
+				        </div>
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination"></div>
+				</div>
+				<!-- 导航 -->
+			</div>
+		</div>
+	</div>
+	<div class="blackpool f2">
+		<!-- 四则广告 -->
+		<div class="webad">
+			<ul>
+				<li><img src="img/t01aad5c130b8653368.jpg"></li>
+				<li><img src="img/t01dc8f9631026e7e17.jpg"></li>
+				<li><img src="img/t013b648422d14559d0.png"></li>
+				<li><img src="img/t01fc1fd0e5522663ba.jpg"></li>
+			</ul>
+		</div>
+		<!-- 手机回收 -->
+		<p class="f2-title">
+			<span>热门手机回收</span>
+			<a href="javascript:;">查看更多</a>
+		</p>
+		<div class="f2-floor1">
+			<a href="javascript:;"><img src="img/t01a10599c63e402740.png"></a>
+			<ul>
+				<script type="text/html" id="phonereturn">
+					<%for(var i in result){%>
+						<li>
+							<div><img src="<%=result[i].img_url%>"></div>
+							<p><%=result[i].model_alis%></p>
+						</li>
+					<%}%>
+				</script>
+			</ul>
+		</div>
+		<!-- 优品精选 -->
+		<p class="f2-title">
+			<span>优品精选</span>
+			<a href="javascript:;">查看更多</a>
+		</p>
+		<div class="f2-floor2">
+			<a href="javascript:;"><img src="img/t015c27655049610a67.png"></a>
+			<ul>
+				<script type="text/html" id="youpin">
+					<%for(var i in result){%>
+						<li>
+							<div><img src="<%=result[i].thum_img.old%>"></div>
+							<p><%=result[i].brand_name%> <%=result[i].model_name%></p>
+							<p class="f2-pay">￥<%=result[i].price%></p>
+						</li>
+					<%}%>
+				</script>
+			</ul>	
+		</div>
+		<p class="f2-title">
+			<span>到店维修</span>
+		</p>
+	</div>
+	<div class="whitepool f3">
+		<!-- 地区选择 -->
+		<div class="areachoose">
+			<div class="f3-province" code="bei_jing">北京<span></span>
+			</div>
+			<div class="province-box">
+				<p>城市列表</p>
+				<span class="close"></span>
+				<div class="province-area">
+					
+					<div id="city-hot" class="city-hot2">
+							<span>热门</span>
+							<div>
+								<script type="text/html" id="cityhotlist2">
+									<%for(var i in result.hotcity){%>
+										<span class="index-citynames" code="<%=result.hotcity[i].code%>"><%=result.hotcity[i].name%></span>
+									<%}%>
+								</script>
+							</div>
+						</div>
+						<div id="city-group" class="city-group2">
+							<script type="text/html" id="citynamelist2">
+								<span>拼音</span>
+								<p>
+									<%for(var i in result.citylist){%>
+										<span class="city-group-blur"><%=i%></span>
+									<%}%>
+								</p>
+									<%for(var i in result.citylist){%>
+										<div>
+											<%for(var j in result.citylist[i]){%>
+											<span class="index-citynames2" code="<%=result.citylist[i][j].code%>"><%=result.citylist[i][j].name%></span>
+											<%}%>
+										</div>
+									<%}%>
+							</script>
+						</div>
+
+				</div>
+			</div>
+			<div class="f3-city">选择区县<span></span></div>
+			<div class="city-box">
+				<p>区县列表</p>
+				<span class="close"></span>
+				<div class="city-area">
+					<!-- <span>全部区县</span>
+					<span>海淀区</span>
+					<span>朝阳区</span>
+					<span>东城区</span>
+					<span>西城区</span>
+					<span>丰台区</span>
+					<span>昌平区</span>
+					<span>密云县</span>
+					<span>怀柔区</span>
+					<span>大兴区</span>
+					<span>延庆区</span>
+					<span>顺义区</span>
+					<span>石景山区</span>
+					<span>房山区</span>
+					<span>通州区</span>
+					<span>门头沟区</span>
+					<span>平谷区</span> -->
+					<script type="text/html" id="cityinner">
+						<span>全部区县</span>
+						<%for(var n in result){%>
+							<span area=<%=n%>><%=result[n]%></span>
+						<%}%>
+					</script>
+				</div>
+			</div>
+			<div class="f3-find">
+				<input type="text" name="find-text" placeholder="请输入您的位置查找附近的商家">
+				<button>搜索</button>
+			</div>
+		</div>
+		<div class="f3-shops-box">
+			<!-- 店铺 -->
+			<div class="f3-shops">
+				<div class="shops-title">
+					<div id="normal-ranking" name="a" class="shops-title-change2 shop-choose">默认排序</div>
+					<div id="no-ranking" class="shops-title-change shop-choose">按成交量</div>
+					<div id="fame-ranking" class="shops-title-change shop-choose">按人气</div>
+					<div id="shops-title-pay"><input type="checkbox" value="pay">先行赔付</div>
+					<div id="f3-map">
+						<span>地图模式</span>
+					</div>
+				</div>
+
+				<ul id="shops-lists">
+					<!-- 店铺列表 -->
+					<script type="text/html" id="shops">
+						<%for(var i in shop_data){%>
+							<li class="shops-list">
+								<a href="javascript:;" class="shops-list-img"><img src="<%=shop_data[i].shop_ico%>"></a>
+								<div class="shops-information">
+									<div class="shops-firsttext">
+										<a href="javascript:;" class="shops-name"><%=shop_data[i].shop_name%></a>
+										<span>店铺等级：</span>
+										<div class="shops-grade">
+											<span></span>
+											<span></span>
+											<span></span>
+											<span></span>
+											<span></span>
+										</div>
+									</div>
+									<div class="shops-dowhat">主营：<%=shop_data[i].main%></div>
+									<p class="shops-address">地址：<%=shop_data[i].addr%></p>
+								</div>
+								<div class="shops-honer">
+									<div><span></span>先行赔付</div>
+									<div><span></span>同城帮认证</div>
+									<div>人气：<span><%=shop_data[i].shop_visit%></span>次浏览</div>
+								</div>
+								<a href="<%=shop_data[i].shop_addr%>" class="shops-goin">进入店铺</a>
+							</li>
+						<%}%>
+					</script>
+					<!-- 店铺列表 -->
+				</ul>
+				<ul class="shops-pages">
+					<li class="shops-ever-pages shops-pages-focus">1</li>
+					<li class="shops-ever-pages shops-pages-blur">2</li>
+					<li class="shops-ever-pages shops-pages-blur">3</li>
+					<li class="shops-ever-pages shops-pages-blur">4</li>
+					<li class="shops-ever-pages shops-pages-blur">5</li>
+					<li class="shops-ever-pages shops-pages-blur">6</li>
+					<li class="shops-ever-pages shops-pages-blur">7</li>
+					<li class="shops-ever-pages shops-pages-blur">8</li>
+					<li class="shops-ever-pages shops-pages-blur">9</li>
+					<li class="shops-ever-pages shops-pages-blur">10</li>
+					<li class="shops-next-page">下一页>></li>
+				</ul>
+			</div>
+			<!-- 地图页面 -->
+			<div id="map-page">
+				<div class="map-box">
+					<p>
+						<span class="map-modle">地图模式</span>
+						<span class="close">X</span>
+					</p>
+				</div>
+			</div>
+			<!-- 地图页面 -->
+
+			<div class="f3-ranking">
+				<p class="f3-ranking-title">商家好评榜</p>
+				<ul id="rankingshops">
+					
+
+
+
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="blackpool f4">
+		<ul class="f4-about">
+			<li>
+				<b></b>
+				<div>
+					<p>购物指南</p>
+					<a href="javascript:;">购物流程</a>
+					<a href="javascript:;">帮助文挡</a>
+				</div>
+			</li>
+			<li>
+				<b></b>
+				<div>
+					<p>支付方式</p>
+					<a href="javascript:;">在线支付、当面付款</a>
+				</div>
+			</li>
+			<li>
+				<b></b>
+				<div>
+					<p>售后服务</p>
+					<a href="javascript:;">投诉建议</a>
+					<a href="javascript:;">售后说明</a>
+				</div>
+			</li>
+			<li>
+				<b></b>
+				<div>
+					<p>商家合作</p>
+					<a href="javascript:;" style="color:#239bf8">加盟同城帮</a>
+					<a href="javascript:;">新闻采访/跨界合作</a>
+				</div>
+			</li>
+		</ul>
+		<p class="f4-p1">客服电话：4000-399-360 / 010-53767360 <a href="javascript:;">投诉建议</a><a href="javascript:;">网站地图</a></p>
+		<p class="f4-p2">Copyright © 2005-2017&nbsp;&nbsp;360.CN&nbsp;&nbsp;All Rights&nbsp;Reserved&nbsp;&nbsp;360安全中心</p>
+		<p class="f4-p3"><a href="javascript:;">京ICP备08010314号-19</a>    京公网安备110000000006号</p>
+	</div>
+	<div id="float-ad">
+		<span></span>
+	</div>
+
+
+
+
+
+</body>
+
+<script type="text/javascript" src="js/swiper-3.4.2.min.js"></script>
+
+
+ 
+
+
+<script type="text/html" id="ranking">
+	<%for(var i in shop_data){%>
+		<li class="ranking-list">
+			<a href="<%=shop_data[i].shop_addr%>" class="ranking-img"><img src="<%=shop_data[i].shop_ico%>"></a>
+			<a href="<%=shop_data[i].shop_addr%>" class="ranking-shopname"><%=shop_data[i].shop_name%></a>
+			<p><span><%=shop_data[i].comments%></span>条评论</p>
+		</li>
+	<%}%>
+</script>
+
+
+
+
+<script type="text/javascript" src="js/close.js"></script>
+<script type="text/javascript" src="js/getajax.js"></script>
+</html>

@@ -1,0 +1,165 @@
+/*统一样式*/
+html,body,div,ul,li,a,p,ol,dl,dt,dd,table,tr,td,header,footer,nav,span,img,b,i{
+	padding: 0;
+	margin: 0;
+	font-family: "微软雅黑";
+	color: #333333;
+	box-sizing:border-box;
+}
+ul,li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+table,tr,td{
+	border-collapse: collapse;
+}
+body{
+	font-size: 65.5%;
+}
+/*最下导航部分*/
+nav{
+	height: 47px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	border: solid 1px #e3e3e4;
+}
+.nav_list{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+.nav_list td{
+	border: solid 1px #e3e3e4;
+	line-height: 47px;
+	text-align: center;
+	height: 100%;
+	font-size: 1.2rem;
+}
+.nav_list td span{
+	margin-top: 13px;
+	display: block;
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin-left: 29.6%;
+	background-size: 250px;
+}
+.nav_job span{
+	background: url(../img/icon.png) -32px -20.5px no-repeat;
+}
+.nav_find span{
+	background: url(../img/icon.png) -14px -2px no-repeat;
+}
+.nav_main span{
+	background: url(../img/icon.png) -52.5px -2px no-repeat;
+}
+.nav_list td b{
+	float: left;
+	font-weight: 400;
+}
+.nav_focus{
+	background-color: #e7f3f0;
+}
+.nav_focus b{
+	color: #00b38a;
+}
+
+
+/*主页部分*/
+.body_box{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 47px;
+	overflow: auto;
+	border-top: 1px solid #e3e3e4;
+	border-right: 1px solid #e3e3e4;
+	border-left: 1px solid #e3e3e4;
+}
+/*头部*/
+header{
+	height: 45px;
+	line-height: 45px;
+	background: #00b38a;
+	color: #fff;
+	font-size: 1.2rem;
+	text-align: center;
+}
+/*登录链接*/
+.index_gologin{
+	border-bottom: 1px solid #e8e8e8;
+	height: 43px;
+	line-height: 43px;
+	padding: 0 15px;
+	color: #555;
+	font-size: .9rem;
+}
+.index_gologin>a{
+	float: right;
+	margin-right: 15px;
+	display: block;
+	background: #f5f5f5;
+	padding: 0 20px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 15px;
+	margin-top: 6px;
+	color: #00b38a;
+}
+/*招聘列表*/
+.index_list>li{
+	height: 91px;
+	border-bottom: 1px solid #e8e8e8;
+	padding: 14px;
+}
+.index_list>li>img{
+	width: 60px;
+	height: 60px;
+	float: left;
+}
+.index_list>li>div{
+	float: left;
+	margin-left: 64px;
+}
+.index_list>li>div>p:first-of-type{
+	margin-bottom: 6px;
+	font-weight: bold;
+	font-size: 1rem;
+}
+.index_list>li>div>p:last-of-type{
+	margin-top: 6px;
+}
+.index_list>li>span{
+	float: right;
+	line-height: 60px;
+	color: #00b38a;
+	font-size: 1rem;
+}
+/*获取更多*/
+.get_more{
+	height: 50px;
+	line-height: 50px;
+	font-size: 1.2rem;
+	text-align: center;
+	background: #fafafa;
+}
+/*底部*/
+footer{
+	height: 116px;
+	padding-top: 30px;
+}
+footer>p{
+	line-height: 32px;
+	text-align: center;
+}
+footer>p>span{
+	color: #999;
+}

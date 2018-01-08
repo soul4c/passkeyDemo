@@ -1,0 +1,90 @@
+<!-- 城市列表 (头部)-->
+	<script type="text/html" id="hotcity">
+		<%for(var n = 0;n<result.hotcity.length;n++){%>
+			<li><%=result.hotcity[n].name%></li>
+		<%}%>
+	</script>
+
+
+
+	<script type="text/html" id="citylist">
+		<ul class='dd1'>
+			<%for(var n in result.citylist){%>
+					<li><%=n%></li>
+			<%}%>
+		</ul>
+
+		<%for(var n in result.citylist){%>
+		<div class="dd2">
+			<%for(var  j in result.citylist[n]){%>
+				<a href=""><%=result.citylist[n][j].name%></a>
+			<%}%>
+		</div>	
+		<%}%>	
+	</script>
+<!-- 修手机	 -->
+	<script type="text/html" id="ppb">
+		<%for(var i = 0;i<result.length;i++){%>
+			<div class="pproblem">
+				<p><%=result[i].name+">"%></p>		
+			</div>
+			<div class="ppd">
+				<%for(var j=0;j<result[i].list.length;j++){%>
+						<a href=""><%=result[i].list[j].name%></a>
+				<%}%>
+			</div>
+		<%}%>
+	</script>
+<!-- 修电脑 -->
+	<script type="text/html" id="hp">
+		<%for (var i = 0; i < result.hot.length; i++) {%>
+			<a href=""><%=result.hot[i].name%></a>
+		<%}%>		
+	</script>
+	<script type="text/html" id="op">
+	<%for (var i = 0; i < result.other.length; i++) {%>
+		<a href=""><%=result.other[i].name%></a>
+	<%}%>
+	</script>
+<!-- 买卖手机 -->
+	<script type="text/html" id="content_b">
+		<%for(var n = 0;n<result.length;n++){%>
+			<a href=""><%=result[n].name%></a>
+		<%}%>
+	</script>
+	<script type="text/html" id="content_s">
+		<%for(var n in result){%>
+			<a href=""><%=result[n]%></a>
+		<%}%>
+	</script>
+<!-- 维修 -->
+	<script type="text/html" id="info">
+		<%for(var n = 0;n<shop_data.length;n++){%>
+			<li class="ull">
+				<div class="lia">
+					<a href=""><img src=<%=shop_data[n].shop_ico%> alt=""></a>
+					<p><a href=""><%=shop_data[n].shop_name%></a><span class="span">店铺等级：</span><span class="span1"></span><span class="span1"></span></p>
+					<p><%=shop_data[n].shop_desc%></p>
+					<p><%=shop_data[n].addr%></p>		
+				</div>
+				<div class="lib">
+					<p class="p1">先行赔付</p>
+					<p class="p2">同城帮认证</p>
+					<p>人气：<%=shop_data[n].shop_visit%>次浏览</p>
+				</div>
+				<div class="miss"><a href=<%=shop_data[n].shop_addr%> target="_blank">进入店铺</a></div>
+			</li>	
+		<%}%>
+	</script>
+<!-- 热门回收 -->
+	<script type="text/html" id="hs">
+		<%for(var n=0;n<result.length;n++){%>		
+			<li><a href="http://bang.360.cn/huishou" target="_blank"><img src=<%=result[n].img_url%> alt=""><span><%=result[n].model_alis%></span></a></li>
+		<%}%>
+	</script>
+<!-- 优品精选 -->
+	<script type="text/html" id="hl">
+		<%for(var n=0;n<result.length;n++){%>		
+			<li><a href=""><img src=<%=result[n].thum_img.big%> alt=""><div><%=result[n].brand_name+result[n].model_name%><br><b>￥<%=result[n].price%></b></div></a></li>
+		<%}%>
+	</script>
