@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css">
+</head>
+<body>
+	<!-- 音乐播放栏 -->
+	<div class="tomusic">
+		<audio id="player">
+			<source src="music/黑暗骑士.mp3">
+		</audio>
+		<!-- 背景图片 -->
+		<div class="tomusic_bg"></div>
+		<!-- 背景遮罩 -->
+		<div class="tomusic_bgcover"></div>
+		<!-- 播放信息和控件 -->
+		<div class="tomusic_controls">
+			<img src="img/4958001508495801.png" class="tomusic_img">
+			<span class="tomusic_name">消愁</span>
+			<span class="tomusic_author">毛不易</span>
+			<span class="tomusic_download"></span>
+			<span id="tomusic_play" class="tomusic_play"></span>
+		</div>
+	</div>
+
+	<!-- 音乐页面 -->
+	<div class="music">
+		<!-- 音乐页面顶端 -->
+		<div class="music_title">
+			<a href="javascript:;"></a>
+			<span>消愁</span>
+		</div>
+		<!-- 音乐页面主体 -->
+		<div class="music_page">
+			<div class="music_page_bg"></div>
+			<div class="music_page_cover"></div>
+			<div class="music_page_body">
+				<p>消愁</p>
+				<p>毛不易</p>
+				<div class="music_page_body_player">
+					<div class="music_page_body_player_pause"></div>
+				</div>
+				<div class="music_words">
+					<p class="music_words_fff">消愁 - 毛不易</p>
+					<p>作词：毛不易</p>
+					<p>作曲：毛不易</p>
+					<p>当你走近了这欢乐场</p>
+					<p>当你走近了这欢乐场</p>
+					<p>当你走近了这欢乐场</p>
+					<p>当你走近了这欢乐场</p>
+					<p>当你走近了这欢乐场</p>
+					<p>当你走近了这欢乐场</p>
+					<p>当你走近了这欢乐场</p>
+					<p>当你走近了这欢乐场</p>
+					<p>当你走近了这欢乐场</p>
+				</div>
+				<div class="music_xmdownload">
+					<span class="music_collect"></span>
+					<p>去虾米APP,查看完整视频></p>
+					<span class="music_HQ"></span>
+				</div>
+				<div class="music_controls"></div>
+
+
+
+
+				<div class="music_download">
+					<span></span>
+					免费下载这首歌
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- 主体部分 -->
+	<div class="index_body">
+		<!-- 头部 -->
+		<header>
+			<span>APP试听高品质</span>
+		</header>
+		<!-- 导航 -->
+		<nav>
+			<div class="nav_list nav_focus" id='0'>新歌</div>
+			<div class="nav_list" id='1'>排行榜</div>
+			<div class="nav_list" id='2'>歌曲</div>
+			<div class="nav_list" id='3'>歌手</div>
+			<div class="nav_list" id='4'>搜索</div>
+		</nav>
+		<!-- 主体盒子 -->
+		<div class="body_box">
+			<div class="newsongs">
+				<img src="img/TB1s.XCKFXXXXbRXFXXXXXXXXXX-750-176.png" class="newsongs_banner">
+				<ul class="newsongs_list">
+					<li>
+						<p class="newsongs_name"><span>像风一样</span><span class=""></span></p>
+						<p class="newsongs_anthor">薛之谦</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>9420</span><span class=""></span></p>
+						<p class="newsongs_anthor">麦小兜</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>躲猫猫（Peek-A-Boo）</span><span class="newsongs_pay"></span></p>
+						<p class="newsongs_anthor">Red Velvet</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>一眼千年</span><span class=""></span></p>
+						<p class="newsongs_anthor">那英</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>Nothing to Lose</span><span class=""></span></p>
+						<p class="newsongs_anthor">易烊千玺</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>风清扬</span><span class="newsongs_pay"></span></p>
+						<p class="newsongs_anthor">马云；王菲</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>Victoria</span><span class=""></span></p>
+						<p class="newsongs_anthor">G.E.M.邓紫棋</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>我多喜欢你，你会知道</span><span class=""></span></p>
+						<p class="newsongs_anthor">王俊琪</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>想把你留在这里</span><span class=""></span></p>
+						<p class="newsongs_anthor">T-T；Jony；J</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>静下来</span><span class=""></span></p>
+						<p class="newsongs_anthor">赵雷</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>OKAY</span><span class=""></span></p>
+						<p class="newsongs_anthor">王嘉尔</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>骆驼</span><span class=""></span></p>
+						<p class="newsongs_anthor">薛之谦</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>蓝色降落伞</span><span class=""></span></p>
+						<p class="newsongs_anthor">周深</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>可惜不是你</span><span class=""></span></p>
+						<p class="newsongs_anthor">曹轩宾；金海心</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>80000原声</span><span class="newsongs_pay"></span></p>
+						<p class="newsongs_anthor">PRC 巴音汗</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>戒烟</span><span class="newsongs_pay"></span></p>
+						<p class="newsongs_anthor">李荣浩</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>情话微甜</span><span class=""></span></p>
+						<p class="newsongs_anthor">王圣锋；李朝</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>偷故事的人</span><span class="newsongs_pay"></span></p>
+						<p class="newsongs_anthor">张惠妹</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>四年半</span><span class=""></span></p>
+						<p class="newsongs_anthor">杨清柠</p>
+					</li>
+					<li>
+						<p class="newsongs_name"><span>追梦赤子心</span><span class=""></span></p>
+						<p class="newsongs_anthor">鹿晗</p>
+					</li>
+				</ul>
+				<div class="newsongs_footer">
+					<p>点击查看更多</p>
+					<p>去虾米APP，试听更多好歌曲</p>
+				</div>
+			</div>
+
+
+
+			<!-- 排行榜 -->
+			<div class="ranking">
+				<ul class="ranking_list">
+					<li>
+						<img src="img/ranking/T19LocFghXXXXsGF3s-640-640.png">
+						<p>虾米音乐榜</p>
+						<div class="ranking_corner"></div>
+					</li>
+					<li>
+						<img src="img/ranking/T1qMgSFlxkXXXsGF3s-640-640.png">
+						<p>虾米原创榜</p>
+						<div class="ranking_corner"></div>
+					</li>
+					<li>
+						<img src="img/ranking/TB1RTkfNVXXXXXdXFXXXXXXXXXX-290-290.png">
+						<p>Hito中文排行榜</p>
+						<div class="ranking_corner"></div>
+					</li>
+					<li>
+						<img src="img/ranking/TB1GMQvNVXXXXbwXXXXXXXXXXXX-290-290.png">
+						<p>香港劲歌金榜</p>
+						<div class="ranking_corner"></div>
+					</li>
+					<li>
+						<img src="img/ranking/TB11FsrNVXXXXabXpXXXXXXXXXX-290-290.png">
+						<p>英国UK单曲榜</p>
+						<div class="ranking_corner"></div>
+					</li>
+					<li>
+						<img src="img/ranking/TB1EqgvNVXXXXbPXXXXXXXXXXXX-290-290.png">
+						<p>Billboard单曲榜</p>
+						<div class="ranking_corner"></div>
+					</li>
+					<li>
+						<img src="img/ranking/TB17O3cNVXXXXa0XFXXXXXXXXXX-290-290.png">
+						<p>Oricon工信单曲榜</p>
+						<div class="ranking_corner"></div>
+					</li>
+					<li>
+						<img src="img/ranking/TB1K.ErNVXXXXXcXpXXXXXXXXXX-290-290.png">
+						<p>M-net综合数据周榜</p>
+						<div class="ranking_corner"></div>
+					</li>
+					<li>
+						<img src="img/ranking/TB1nUn_NVXXXXX4XVXXXXXXXXXX-330-330.png">
+						<p>陌陌试听榜</p>
+						<div class="ranking_corner"></div>
+					</li>
+					<li>
+						<img src="img/ranking/TB1nmf7NVXXXXbFXVXXXXXXXXXX-330-330.png">
+						<p>音乐风云榜</p>
+						<div class="ranking_corner"></div>
+					</li>
+					<li>
+						<img src="img/ranking/TB1mrUbNVXXXXaFXVXXXXXXXXXX-330-330.png">
+						<p>微信分享榜</p>
+						<div class="ranking_corner"></div>
+					</li>
+					<li>
+						<img src="img/ranking/TB1h1oaNVXXXXXrXVXXXXXXXXXX-330-330.png">
+						<p>微博分享榜</p>
+						<div class="ranking_corner"></div>
+					</li>
+					<li>
+						<img src="img/ranking/TB1tK7cNVXXXXXgXVXXXXXXXXXX-330-330.png">
+						<p>大虾试听榜</p>
+						<div class="ranking_corner"></div>
+					</li>
+					<li>
+						<img src="img/ranking/TB1KQseNVXXXXbfXFXXXXXXXXXX-330-330.png">
+						<p>歌单收录榜</p>
+						<div class="ranking_corner"></div>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 歌曲 -->
+			<div class="songs">
+				<ul class="songs_list">
+					<li>
+						<img src="img/sings/5a20c073dff2e_dMnK_1512095859.jpg">
+						<p>莫扎特之夜纪念精选集（声乐、...</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<img src="img/sings/5a1653f65b40e_Bt9Y_1511412726.jpg">
+						<p>每个有你的世界</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<img src="img/sings/5a13895780e2f_P20y_1511229783.jpg">
+						<p>华语精选|哪有什么可以重头来过</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<img src="img/sings/249356315_1480492788_0jAV.jpg">
+						<p>少年，你的情书掉了噢</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<img src="img/sings/262792832_5898aa59c3b5d_kgil_1486400089.jpg">
+						<p>美丽无比的翻唱</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<img src="img/sings/281498428_5a0c23359c9a2_K13W_1510744885.jpg">
+						<p>『回忆很甜。』微醺迷醉小酒馆</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<img src="img/sings/356305419_5a11529ded743_xHj5_1511084701.jpg">
+						<p>我在冬天想念你</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<img src="img/sings/356707483_1507787267_WW6d.jpg">
+						<p>那些清新的中日韩女声</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<img src="img/sings/357351040_1508822635_ySAK.jpeg">
+						<p>I Love Rock & Roll（1）</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<img src="img/sings/358819397_1510746518_nC5c.jpg">
+						<p>冬天到了，就猫在你怀里吧！</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<img src="img/sings/359125148_1511269173_IFtx.jpg">
+						<p>【前奏沦陷】愿你一生有山可靠...</p>
+						<div class="songs_corner"></div>
+					</li>
+				</ul>
+			</div>
+
+
+			<!-- 歌手 -->
+			<div class="singer">
+				<ul class="singer_list">
+					<li>
+						<p>华语男歌手</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<p>华语女歌手</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<p>华语乐队组合</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<p>欧美男歌手</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<p>欧美女歌手</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<p>欧美乐队组合</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<p>日本男歌手</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<p>日本女歌手</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<p>日本乐队组合</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<p>韩国男歌手</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<p>韩国女歌手</p>
+						<div class="songs_corner"></div>
+					</li>
+					<li>
+						<p>韩国乐队组合</p>
+						<div class="songs_corner"></div>
+					</li>
+				</ul>
+			</div>
+			<div class="find">
+				<div class="find_find">
+					<input type="text" name='find_words' class="find_words" placeholder="输入歌曲、专辑、艺人名搜索">
+					<input type="submit" name="find_btn" class="find_btn" value="搜索">
+				</div>
+				<p class="find_hotword">今日搜索热词</p>
+				<ul class="find_list">
+					<li>
+						<p><i class="find_list_color">1</i>五月天</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i class="find_list_color">2</i>陈奕迅</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i class="find_list_color">3</i>林宥嘉</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>4</i>儿歌</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>5</i>毛不易</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>6</i>张学友</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>7</i>田馥甄</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>8</i>remember me</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>9</i>李宗盛</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>10</i>寻梦环游记</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>11</i>王菲</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>12</i>she</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>13</i>远走高飞</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>14</i>追光者</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>15</i>梁静茹</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>16</i>iu</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>17</i>消愁</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>18</i>张国荣</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>19</i>刘若英</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>20</i>80000</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>21</i>莫文蔚</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>22</i>鹿晗</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>23</i>孙燕姿</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>24</i>我们不一样</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>25</i>陈粒</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>26</i>刘德华</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>27</i>成都</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>28</i>许巍</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>29</i>邓紫棋</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>30</i>gai</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>31</i>抖音</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>32</i>小幸运</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>33</i>赵雷</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>34</i>陈小春</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>35</i>beyond</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>36</i>王力宏</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>37</i>Taylor swift</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>38</i>王杰</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>39</i>天后</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>40</i>9420</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>41</i>轻音乐</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>42</i>刀郎</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>43</i>任贤齐</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>44</i>林忆莲</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>45</i>u2</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>46</i>一生所爱</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>47</i>邓丽君</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>48</i>张惠妹</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>49</i>你的名字</p><div class="songs_corner"></div>
+					</li>
+					<li>
+						<p><i>50</i>time</p><div class="songs_corner"></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 轮播图 -->
+	<!-- <div class="swiper-container">
+		<div class="swiper-wrapper">
+	        <div class="swiper-slide"><img src="img/"></div>
+	        <div class="swiper-slide"><img src="img/"></div>
+	        <div class="swiper-slide"><img src="img/"></div>
+	    </div>
+	    <div class="swiper-pagination"></div>
+	</div> -->
+
+	
+
+
+</body>
+
+
+
+<!-- 自己的js和轮播图的js -->
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/swiper-3.4.2.min.js"></script>
+<script type="text/javascript">
+	var mySwiper = new Swiper ('.swiper-container', {
+	    direction: 'horizontal',
+	    loop: true,
+	    pagination: '.swiper-pagination',
+		autoplay: 2000
+	})
+</script>
+
+
+
+</html>

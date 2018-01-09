@@ -1,0 +1,651 @@
+/*统一样式*/
+html,header,nav,footer,b,i,div,ul,li,p,span,img,form,input,a,ol,dl,dt,dd,table,tr,td,body{
+	margin: 0;
+	padding: 0;
+	color: #666666;
+	font-family: "微软雅黑";
+	box-sizing:border-box; 
+}
+ul,li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+html{
+	font-size: 100px;
+}
+body{
+	font-size: 16px;
+}
+::-webkit-scrollbar{
+	height: 0;
+	width: 0;
+}
+
+
+
+/*音乐播放栏*/
+.tomusic{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: .72rem;
+	z-index: 500;
+	overflow: hidden;
+	border-top: 1px solid #dbd9d6;
+}
+/*底部音乐背景*/
+.tomusic_bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/4958001508495801.png) left center repeat;
+	background-size: 100% auto;
+	z-index: 501;
+	filter:blur(.12rem);
+	-webkit-filter:blur(.12rem);
+}
+/*底部音乐遮罩*/
+.tomusic_bgcover{
+	background: rgba(0,0,0,0.4);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 502;
+}
+.tomusic_controls{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 503;	
+}
+.tomusic_img{
+	width: .6rem;
+	height: .6rem;
+	position: absolute;
+	top: .04rem;
+	left: .06rem;
+}
+.tomusic_img>img{
+	width: 100%;
+	height: 100%;
+}
+.tomusic_controls>span{
+	color: #fff;
+}
+.tomusic_name{
+	font-size: .16rem;
+	position: absolute;
+	top: .08rem;
+	left: .78rem;
+}
+.tomusic_author{
+	font-size: .14rem;
+	position: absolute;
+	left: .78rem;
+	top: .37rem;
+}
+.tomusic_download{
+	position: absolute;
+	top: .22rem;
+	left: 2.58rem;
+	width: .19rem;
+	height: .22rem;
+	display: block;
+	z-index: 505;
+	background: url(../img/download.png) left top no-repeat;
+	background-size: .19rem .22rem;
+}
+.tomusic_play{
+	width: .17rem;
+	height: .21rem;
+	display: block;
+	position: absolute;
+	top: .22rem;
+	left: 3.33rem;
+	z-index: 505;
+	background: url('../img/play.png') left top no-repeat;
+	background-size: .17rem .21rem;	
+}
+.tomusic_pause{
+	width: .17rem;
+	height: .21rem;
+	display: block;
+	z-index: 505;
+	position: absolute;
+	top: .22rem;
+	left: 3.33rem;
+	background: url('../img/pause.png') left top no-repeat;
+	background-size: .17rem .21rem;	
+}
+
+
+/*音乐页面*/
+.music{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 600;
+	background: #fff;
+	display: none;
+}
+.music_title{
+	height: .48rem;
+	line-height: .48rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*background: #e4e3e1;*/
+	background: rgba(250,250,250,0.9);
+	text-align: center;
+	color: #262b2f;
+	z-index: 700;
+	font-size: .16rem;
+	white-space: nowrap;
+}
+.music_title>a{
+	height: .48rem;
+	width: .24rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	background: url(../img/back.png);
+	background-size: 100% auto;
+}
+/*音乐页面主体*/
+.music_page{
+	z-index: 601;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+}
+.music_page_bg{
+	background: url(../img/4958001508495801.png) center top no-repeat;
+	background-size: auto 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 602;
+	filter:blur(0.15rem);
+	-webkit-filter:blur(0.15rem);
+	-webkit-transform: scale(1.05);
+}
+.music_page_cover{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 603;
+	background: rgba(0,0,0,0.4);
+}
+.music_page_body{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 604;
+	padding-top: .65rem;
+}
+.music_page_body>p:first-of-type{
+	color: #fff;
+	font-size: .14rem;
+	text-align: center;
+}
+.music_page_body>p:nth-of-type(2){
+	color: #fff;
+	font-size: .12rem;
+	text-align: center;
+	margin-top: .02rem;
+}
+.music_page_body_player{
+	width: 1.87rem;
+	height: 1.87rem;
+	background: url(../img/4958001508495801.png) left top no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 1.14rem;
+	left: .94rem;
+	border-radius: 50%;
+}
+.music_page_body_player>div{
+	height: .5rem;
+	width: .5rem;
+	margin: .68rem auto;
+	border-radius: 50%;
+}
+.music_page_body_player_pause{
+	background: url(../img/controls.png) left top no-repeat rgba(0,0,0,0.4);
+	background-size: auto 100%;
+}
+.music_page_body_player_play{
+	background: url(../img/controls.png) -1.7476rem top no-repeat rgba(0,0,0,0.4);
+	background-size: auto 100%;
+}
+.music_words{
+	width: 100%;
+	position: absolute;
+	top: 3.28rem;
+	left: 0;
+	height: .8rem;
+	overflow: auto;
+}
+.music_words>p{
+	text-align: center;
+	color: #999999;
+	font-size: .13rem;
+	line-height: .22rem;
+}
+.music_words>.music_words_fff{
+	color: #fff;
+	font-size: .13rem;
+}
+.music_xmdownload{
+	height: .22rem;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 4.31rem;
+}
+.music_collect{
+	width: .24rem;
+	height: .22rem;
+	display: block;
+	background: url(../img/heart.png) left top no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: .19rem;
+	top: 0;
+	opacity: 0.5;
+}
+.music_xmdownload>p{
+	height: .22rem;
+	line-height: .22rem;
+	text-align: center;
+	font-size: .13rem;
+	color: #ddd;
+}
+.music_HQ{
+	background: url(../img/HQ.png) left top no-repeat;
+	background-size: 100% 100%;
+	width: .44rem;
+	height: .22rem;
+	position: absolute;
+	top: 0;
+	left: 3.12rem;
+}
+.music_download{
+	/*18,19*/
+	width: 2.33rem;
+	height: 42px;
+	border-radius: 21px;
+	background: #ff6600;
+	color: #fff;
+	font-size: 16px;
+	padding-left: .86rem;
+	line-height: 42px;
+	position: absolute;
+	bottom: .96rem;
+	left: .71rem;
+}
+.music_download>span{
+	width: 18px;
+	height: 19px;
+	display: block;
+	background: url(../img/down.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: .38rem;
+	top: 10px;	
+}
+
+
+/*主题部分*/
+.index_body{
+	position: fixed;
+	top: 0;
+	bottom: .72rem;
+	left: 0;
+	width: 100%;
+	overflow: auto;
+}
+/*头部*/
+header{
+	height: .96rem;
+	width: 100%;
+	background: url(../img/TB1VRVNKFXXXXXsXpXXXXXXXXXX-426-84.png) 12px center no-repeat #ff5e00;
+	background-size: auto .37rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+header>span{
+	width: 1.18rem;
+	height: 34px;
+	line-height: 34px;
+	display: block;
+	background: #fff;
+	color: #ff5e00;
+	text-align: center;
+	font-size: .13rem;
+	border-radius: 17px;
+	position: absolute;
+	top: .31rem;
+	right: .12rem;
+}
+/*导航*/
+nav{
+	height: .48rem;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: .96rem;
+	background: #f6f6f6;
+	display: flex;
+}
+.nav_list{
+	flex:1;
+	text-align: center;
+	height: .48rem;
+	line-height: .48rem;
+	color: #262b2f;
+	font-size: .16rem;
+}
+.nav_focus{
+	border-bottom: 2px solid #ff5800;
+	color: #ff5800;
+}
+/*主体盒子*/
+.body_box{
+	position: absolute;
+	top: 1.44rem;
+	left: 0;
+	width: 100%;
+}
+.body_box>div{
+	width: 100%;
+}
+/*新歌*/
+.newsongs{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.newsongs_banner{
+	width: 100%;
+}
+.newsongs_list>li{
+	height: .62rem;
+	border-bottom: 1px solid #e0e0e0;
+	padding-left: 11px;
+	padding-top: .09rem;
+}
+.newsongs_name{
+	height: .18rem;
+	line-height: .18rem;
+}
+.newsongs_name>span:first-of-type{
+	color: #000000;
+	font-size: .14rem;
+	float: left;
+}
+.newsongs_anthor{
+	font-size: .11rem;
+	color: #afafb0;
+	margin-top: 1px;
+}
+.newsongs_pay{
+	margin-left: 8px;
+	width: 35px;
+	height: 15px;
+	background: url(../img/TB1HdWFKXXXXXazXVXXpwEGJpXX-87-36.png) left top no-repeat;
+	background-size: 100% 100%;
+	display: block;
+	float: left;
+}
+.newsongs_footer{
+	height: 1.08rem;
+}
+.newsongs_footer>p:first-of-type{
+	font-size: .14rem;
+	margin-top: .13rem;
+	text-align: center;
+	color: #000000;
+}
+.newsongs_footer>p:last-of-type{
+	font-size: .14rem;
+	text-align: center;
+	margin-top: .36rem;
+	color: #fa7829;
+}
+
+
+/*排行榜*/
+.ranking{
+	display: none;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.ranking_list{
+	width: 100%;
+	margin-bottom: .24rem;
+}
+.ranking_list>li{
+	height: .73rem;
+	width: 100%;
+	border-bottom: 1px solid #e0e0e0;
+	padding-left: .75rem;
+	position: relative;
+}
+.ranking_list>li>img{
+	width: .48rem;
+	height: .48rem;
+	position: absolute;
+	top: .12rem;
+	left: .12rem;
+}
+.ranking_list>li>p{
+	font-size: .15rem;
+	height: .73rem;
+	line-height: .73rem;
+	color: #000000;
+}
+.ranking_corner{
+	width: .12rem;
+	height: .12rem;
+	border-top: 1px solid #848484;
+	border-right: 1px solid #848484;
+	position: absolute;
+	right: .2rem;
+	top: .31rem;
+	transform:rotate(45deg);
+}
+
+
+/*歌曲*/
+.songs{
+	display: none;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.songs_list{
+	width: 100%;
+	margin-bottom: .24rem;
+}
+.songs_list>li{
+	height: .73rem;
+	width: 100%;
+	border-bottom: 1px solid #e0e0e0;
+	padding-left: .75rem;
+	position: relative;
+}
+.songs_list>li>img{
+	width: .48rem;
+	height: .48rem;
+	position: absolute;
+	top: .12rem;
+	left: .12rem;
+}
+.songs_list>li>p{
+	font-size: .15rem;
+	height: .73rem;
+	line-height: .73rem;
+	color: #000000;
+}
+.songs_corner{
+	width: .12rem;
+	height: .12rem;
+	border-top: 1px solid #848484;
+	border-right: 1px solid #848484;
+	position: absolute;
+	right: .2rem;
+	top: .31rem;
+	transform:rotate(45deg);
+}
+
+
+/*歌手*/
+.singer{
+	display: none;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.singer_list{
+	width: 100%;
+	margin-bottom: .24rem;
+}
+.singer_list>li{
+	height: .73rem;
+	width: 100%;
+	border-bottom: 1px solid #e0e0e0;
+	padding-left: .12rem;
+	position: relative;
+}
+.singer_list>li>p{
+	font-size: .15rem;
+	height: .73rem;
+	line-height: .73rem;
+	color: #000000;
+}
+.singer_corner{
+	width: .12rem;
+	height: .12rem;
+	border-top: 1px solid #848484;
+	border-right: 1px solid #848484;
+	position: absolute;
+	right: .2rem;
+	top: .31rem;
+	transform:rotate(45deg);
+}
+
+
+
+/*搜索*/
+.find{
+	display: none;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #f4f5f7;
+
+}
+.find_find{
+	background: #fff;
+	height: .61rem;
+	width: 100%;
+	position: relative;
+}
+.find_words{
+	width: 2.79rem;
+	height: .38rem;
+	position: absolute;
+	top: .11rem;
+	left: 12px;
+	outline: none;
+	border: 1px solid #d9d9d9;
+	border-radius: 5px;
+	background: url(../img/mirro.png) 5px top no-repeat #f4f5f7;
+	background-size: auto 100%;
+	padding-left: .25rem;
+}
+.find_btn{
+	width: .6rem;
+	height: .38rem;
+	position: absolute;
+	right: 12px;
+	top: .11rem;
+	background: #fb9308;
+	color: #fff;
+	font-size: .14rem;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+}
+.find_hotword{
+	height: .46rem;
+	line-height: .46rem;
+	color: #000;
+	padding-left: 12px;
+	font-size: .12rem;
+}
+.find_list{
+	width: 100%;
+	margin-bottom: .24rem;
+	background: #f4f5f7;
+}
+.find_list>li{
+	height: .73rem;
+	width: 100%;
+	border-bottom: 1px solid #e0e0e0;
+	padding-left: .12rem;
+	position: relative;
+}
+.find_list>li>p{
+	font-size: .15rem;
+	height: .73rem;
+	line-height: .73rem;
+	color: #000000;
+}
+.find_corner{
+	width: .12rem;
+	height: .12rem;
+	border-top: 1px solid #848484;
+	border-right: 1px solid #848484;
+	position: absolute;
+	right: .2rem;
+	top: .31rem;
+	transform:rotate(45deg);
+}
+.find_list>li>p>i{
+	margin-right: 12px;
+	color: #000;
+}
+.find_list>li>p>.find_list_color{
+	color: #fe6923;
+}
