@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #cv{
+            width: 1000px;
+            height: 600px;
+            border: solid 2px #999;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            z-index: 200;
+            /*background: url(bg.jpg) 0 0 repeat;*/
+        }
+    </style>
+</head>
+<body>
+    <audio id='au'>
+        <source src="BGM.mp3">
+    </audio>
+    <canvas id='cv' width="1000" height="600"></canvas>
+   
+</body>
+<script type="text/javascript">
+    var au = document.getElementById('au');
+    au.play();  
+    var cv = document.getElementById("cv");
+    try{
+        //获取图形绘制对象
+        var ct = cv.getContext("2d");
+
+        ct.save();
+
+
+        var bg= document.createElement('img');
+        bg.src = "bg.jpg";
+        // bg.onload=function{
+           
+        // }
+        var img = document.createElement("img");
+        img.src = "mla.png";	
+        // ct.beginPath();
+        img.onload=function(){
+            ct.drawImage(img, 0, 0, 60, 70, 0, 472, 60, 60);
+        }
+
+        var l=0;
+        var lw = 60;
+        var w =0;
+        var x=0;
+        var bgw=0;
+        function malgo (){
+            ct.save();
+            ct.clearRect(0,0,1000,600);
+            // ct.beginPath();
+            ct.drawImage(bg, bgw, 0, 2000, 600);
+            ct.drawImage(img, l, 0, lw, 70, w, 472, 60, 60);
+            if(l==0){
+                l=60
+                lw=70
+            }else{
+                l=0
+                lw=60
+            }
+            w+=8;
+
+            if(w>=470){
+                w=470;
+                bgw-=8;
+                if(bgw<=-1000){
+                    bgw=0;
+                }
+            }
+        }
+                // console.log(cv[0].style.background)
+        
+       onkeydown=function(e){
+            if(e.keyCode==39){
+                var aaa=setInterval(malgo(),50) 
+            }
+            
+
+        }
+        onkeyup=function(){
+            clearInterval(malgo())
+        }
+
+    }catch(e){
+        console.log(e);
+    }
+</script>
+</html>
