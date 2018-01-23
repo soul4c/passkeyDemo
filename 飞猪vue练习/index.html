@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<script type="text/javascript" src="./static/jquery-1.11.2.js"></script>
+    <title>vue1711</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script type="text/javascript">
+  	var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+	var per = clientWidth/375;
+	document.documentElement.style.fontSize = per*100 +'px';
+	window.onresize = function(){
+			var clientWidth = document.documentElement.clientWidth || document.body.clientWidth
+			// 计算比例
+			var per = clientWidth / 375;
+			document.documentElement.style.fontSize = per*100 + "px"
+		}
+
+	var tabarr = ["home_blour","discover_blour","bourn_blour","route_blour","mine_blour","home_focuse","discover_focuse","bourn_focuse","route_focuse","mine_focuse"]
+	$("footer>a").on("click",function(){
+		
+		for(var n=0;n<$("footer>a").length;n++){
+			
+				$("footer>a").eq(n).prop('class',tabarr[n]);
+				
+		}
+		$(this).prop('class',tabarr[$(this).index()+5])
+	})
+  </script>
+</html>

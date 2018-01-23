@@ -1,0 +1,45 @@
+{
+
+
+"data":{
+	"poilines":[
+		{
+		"poiid":75596,
+		"cimg":"https://dimg06.c-ctrip.com/images/fd/tg/g2/M06/8A/65/Cghzf1Ww0haAJVjpACXIkXMEKbU984_C_210_118.jpg",
+		"poiname":"八达岭长城",
+		"nums":66
+		},
+		{
+		"poiid":75595,
+		"cimg":"https://dimg06.c-ctrip.com/images/fd/tg/g2/M07/8C/92/Cghzf1Ww87yAOM68AAOcHnazb7o731_C_210_118.jpg",
+		"poiname":"故宫",
+		"nums":47
+		},
+		{
+		"poiid":75597,
+		"cimg":"https://dimg09.c-ctrip.com/images/fd/tg/g4/M0B/02/CC/CggYHFXdIjSALRfwABS6Ode7KJk548_C_210_118.jpg",
+		"poiname":"颐和园",
+		"nums":38
+		},
+		{
+		"poiid":75609,
+		"cimg":"https://dimg08.c-ctrip.com/images/fd/tg/g2/M09/87/F1/CghzgVWwtiuAWmQxAC29VkyVMvg520_C_210_118.jpg",
+		"poiname":"慕田峪长城",
+		"nums":17
+		},
+		{
+		"poiid":13378901,
+		"cimg":"https://dimg03.c-ctrip.com/images/fd/tg/g5/M05/49/C3/CggYsFafGgyAOWmRADU2ArDvY-4052_C_210_118.jpg",
+		"poiname":"古北水镇",
+		"nums":31
+		},
+		{
+		"poiid":75599,
+		"cimg":"https://dimg01.c-ctrip.com/images/fd/tg/g1/M07/C8/43/CghzflWwupGARPuHAAIFlWY-bJY129_C_210_118.jpg",
+		"poiname":"天坛",
+		"nums":22
+		}
+	]
+
+}
+}
